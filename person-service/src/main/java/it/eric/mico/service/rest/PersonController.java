@@ -44,7 +44,7 @@ public class PersonController {
 		Person person = personRepository.getOne(id);
 		if(person == null) {
 			logger.error("Person with id {} not found.", id);
-            return new ResponseEntity<Object>(new CustomErrorType("Person with id " + id 
+            return new ResponseEntity<Object>(new CustomErrorType("Person with   id " + id 
                     + " not found"), HttpStatus.NOT_FOUND);
 		}
 		
