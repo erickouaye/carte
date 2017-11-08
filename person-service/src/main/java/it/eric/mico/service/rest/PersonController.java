@@ -28,7 +28,7 @@ public class PersonController {
 	@Autowired
 	private PersonRepository personRepository;
 	
-	@RequestMapping(value = "/persons/", method = RequestMethod.GET,  produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@RequestMapping(value = "/persons", method = RequestMethod.GET,  produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	 public ResponseEntity<List<Person>> allPersons() {
 		List<Person> persons =personRepository.findAll();
 		if(persons.isEmpty()) {
@@ -52,7 +52,7 @@ public class PersonController {
 	}
 	
 	
-	 @RequestMapping(value = "/person/", method = RequestMethod.POST,  produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	 @RequestMapping(value = "/person", method = RequestMethod.POST,  produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE }, consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	    public ResponseEntity<?> createUser(@RequestBody Person person, UriComponentsBuilder ucBuilder) {
 	        logger.info("Creating person : {}", person);
 

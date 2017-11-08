@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories("it.eric.micro.service.repository")
+@EnableJpaRepositories("it.eric.micro.*")
 public class PersonServiceApplication {
 
 	public static void main(String[] args) {
